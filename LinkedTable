@@ -1,0 +1,1 @@
+[{"ConnectionStr":"Data Source=XA-TOOLS-BARRY7\\BARRYDB;Initial Catalog=BarryTestDB;Integrated Security=True;Persist Security Info=True","TableName":"Table_Test1","TableOriginName":"Table_Test1","TableOriginSchema":"dbo","DbType":1}]

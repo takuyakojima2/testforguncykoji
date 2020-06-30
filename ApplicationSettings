@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationSettings>
+  <FocusMoveMode>Default</FocusMoveMode>
+  <IntegrateWithOtherApplication>
+    <Password>p6IEV2b%7dbj</Password>
+  </IntegrateWithOtherApplication>
+  <MaxRowCount>5000</MaxRowCount>
+  <StartPage>Main</StartPage>
+  <UserServicePort>33095</UserServicePort>
+  <WebSitePort>53022</WebSitePort>
+</ApplicationSettings>

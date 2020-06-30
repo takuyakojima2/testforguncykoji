@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareCommand>
+  <Item class="Forguncy.Model.ShareCommandContainer" assembly="Forguncy">
+    <Commands>
+      <Item class="Forguncy.Model.ShowMessageCommand" assembly="Forguncy">
+        <MessageFormula type="System.String">
+          <Value>test</Value>
+        </MessageFormula>
+      </Item>
+    </Commands>
+    <ID>50f98635-5de5-4e58-9c60-acb8c3e6a260</ID>
+    <Name>再利用コマンド1</Name>
+    <Params>
+      <Item class="Forguncy.Model.ShareCommandParam" assembly="Forguncy">
+        <ID>8a64ae81-7b2b-461c-b725-dab94864034e</ID>
+        <Name>パラメーター1</Name>
+      </Item>
+    </Params>
+  </Item>
+</ShareCommand>

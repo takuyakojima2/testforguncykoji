@@ -1,0 +1,559 @@
+{
+  "Rows": {
+    "Count": 25
+  },
+  "Cols": {
+    "Count": 18
+  },
+  "Values": {
+    "2,4": "ユーザー情報の編集",
+    "13,2": "氏名",
+    "17,2": "メールアドレス",
+    "21,2": "保存",
+    "21,10": "キャンセル"
+  },
+  "AttachInfos": {
+    "6,5": {
+      "CellType": {
+        "$type": "Forguncy.UploadImageCellType, Forguncy",
+        "UIPermissions": [
+          {
+            "Scope": 2,
+            "AllowRoles": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Scope": 1,
+            "AllowRoles": [
+              "FGC_Anonymous"
+            ]
+          }
+        ],
+        "ForguncyAttribute": "ChangeProfile_Picture"
+      }
+    },
+    "14,2": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, Forguncy",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, Forguncy"
+          }
+        ],
+        "UIPermissions": [
+          {
+            "Scope": 2,
+            "AllowRoles": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Scope": 1,
+            "AllowRoles": [
+              "FGC_Anonymous"
+            ]
+          }
+        ],
+        "ForguncyAttribute": "ChangeProfile_FullName"
+      }
+    },
+    "18,2": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, Forguncy",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, Forguncy"
+          }
+        ],
+        "UIPermissions": [
+          {
+            "Scope": 2,
+            "AllowRoles": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Scope": 1,
+            "AllowRoles": [
+              "FGC_Anonymous"
+            ]
+          }
+        ],
+        "ForguncyAttribute": "ChangeProfile_Email"
+      }
+    },
+    "21,2": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, Forguncy",
+        "Text": "保存",
+        "AutoExecute": true,
+        "UIPermissions": [
+          {
+            "Scope": 2,
+            "AllowRoles": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Scope": 1,
+            "AllowRoles": [
+              "FGC_Anonymous"
+            ]
+          }
+        ],
+        "ForguncyAttribute": "ChangeProfile_Button"
+      }
+    },
+    "21,10": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, Forguncy",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.NavigateCommand, Forguncy",
+            "NavigateType": "back",
+            "PassValues": []
+          }
+        ],
+        "Text": "キャンセル",
+        "UIPermissions": [
+          {
+            "Scope": 2,
+            "AllowRoles": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Scope": 1,
+            "AllowRoles": [
+              "FGC_Anonymous"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "BorderBottom": null
+      },
+      {
+        "FontSize": 21.333333969116211,
+        "Foreground": 0,
+        "Formatter": 1,
+        "TextIndent": 0,
+        "HorizontalAlignment": 2,
+        "VerticalAlignment": 3,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": 0
+      },
+      {
+        "BorderTop": null
+      },
+      {
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontSize": 14.666666984558105,
+        "Foreground": 5,
+        "Formatter": 1
+      },
+      {
+        "FontSize": 16.0,
+        "Foreground": 5,
+        "BorderBottom": null,
+        "BorderTop": 1,
+        "BorderLeft": 1,
+        "BorderRight": null
+      },
+      {
+        "FontSize": 16.0,
+        "Foreground": 5,
+        "BorderBottom": null,
+        "BorderTop": 1,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontSize": 16.0,
+        "Foreground": 5,
+        "BorderBottom": null,
+        "BorderTop": 1,
+        "BorderLeft": null,
+        "BorderRight": 1
+      },
+      {
+        "FontSize": 16.0,
+        "Foreground": 5,
+        "BorderBottom": 1,
+        "BorderTop": null,
+        "BorderLeft": 1,
+        "BorderRight": null
+      },
+      {
+        "FontSize": 16.0,
+        "Foreground": 5,
+        "BorderBottom": 1,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontSize": 16.0,
+        "Foreground": 5,
+        "BorderBottom": 1,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": 1
+      },
+      {
+        "Background": 7,
+        "FontSize": 16.0,
+        "FontWeight": 8,
+        "Foreground": 9,
+        "Formatter": 1,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 7,
+        "FontSize": 16.0,
+        "FontWeight": 8,
+        "Foreground": 9,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "BorderRight": null
+      },
+      {
+        "Background": 9,
+        "FontSize": 16.0,
+        "FontWeight": 8,
+        "Foreground": 10,
+        "Formatter": 1,
+        "BorderBottom": null,
+        "BorderTop": 2,
+        "BorderLeft": 2,
+        "BorderRight": null
+      },
+      {
+        "Background": 9,
+        "FontSize": 16.0,
+        "FontWeight": 8,
+        "Foreground": 10,
+        "BorderBottom": null,
+        "BorderTop": 2,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 9,
+        "FontSize": 16.0,
+        "FontWeight": 8,
+        "Foreground": 10,
+        "BorderBottom": null,
+        "BorderTop": 2,
+        "BorderLeft": null,
+        "BorderRight": 2
+      },
+      {
+        "BorderLeft": null
+      },
+      {
+        "Background": 9,
+        "FontSize": 16.0,
+        "FontWeight": 8,
+        "Foreground": 10,
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": 2,
+        "BorderRight": null
+      },
+      {
+        "Background": 9,
+        "FontSize": 16.0,
+        "FontWeight": 8,
+        "Foreground": 10,
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 9,
+        "FontSize": 16.0,
+        "FontWeight": 8,
+        "Foreground": 10,
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": 2
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "#FF09519D",
+        "[AUTO]General",
+        "Center",
+        "Bottom",
+        "#FFA9BCD1",
+        "#FF7F7F7F",
+        "#FFA9A9A9",
+        "#FF248FFF",
+        "Bold",
+        "#FFFFFFFF",
+        "#FF238EFF",
+        "Meiryo UI",
+        "#FF000000"
+      ],
+      "Borders": [
+        {
+          "Color": 4
+        },
+        {
+          "Color": 6
+        },
+        {
+          "Color": 10
+        }
+      ]
+    },
+    "CellStyles": {
+      "1,5": 0,
+      "1,6": 0,
+      "1,7": 0,
+      "1,8": 0,
+      "1,9": 0,
+      "1,10": 0,
+      "1,11": 0,
+      "1,12": 0,
+      "2,4": 1,
+      "2,5": 1,
+      "2,6": 1,
+      "2,7": 1,
+      "2,8": 1,
+      "2,9": 1,
+      "2,10": 1,
+      "2,11": 1,
+      "2,12": 1,
+      "2,13": 1,
+      "3,1": 2,
+      "3,2": 2,
+      "3,3": 2,
+      "3,4": 1,
+      "3,5": 1,
+      "3,6": 1,
+      "3,7": 1,
+      "3,8": 1,
+      "3,9": 1,
+      "3,10": 1,
+      "3,11": 1,
+      "3,12": 1,
+      "3,13": 1,
+      "3,14": 2,
+      "3,15": 2,
+      "3,16": 2,
+      "4,1": 3,
+      "4,2": 3,
+      "4,3": 3,
+      "4,4": 3,
+      "4,5": 3,
+      "4,6": 3,
+      "4,7": 3,
+      "4,8": 3,
+      "4,9": 3,
+      "4,10": 3,
+      "4,11": 3,
+      "4,12": 3,
+      "4,13": 3,
+      "4,14": 3,
+      "4,15": 3,
+      "4,16": 3,
+      "6,5": 4,
+      "6,6": 4,
+      "6,7": 4,
+      "6,8": 4,
+      "6,9": 4,
+      "6,10": 4,
+      "6,11": 4,
+      "6,12": 4,
+      "7,5": 4,
+      "7,6": 4,
+      "7,7": 4,
+      "7,8": 4,
+      "7,9": 4,
+      "7,10": 4,
+      "7,11": 4,
+      "7,12": 4,
+      "8,5": 4,
+      "8,6": 4,
+      "8,7": 4,
+      "8,8": 4,
+      "8,9": 4,
+      "8,10": 4,
+      "8,11": 4,
+      "8,12": 4,
+      "9,5": 4,
+      "9,6": 4,
+      "9,7": 4,
+      "9,8": 4,
+      "9,9": 4,
+      "9,10": 4,
+      "9,11": 4,
+      "9,12": 4,
+      "10,5": 4,
+      "10,6": 4,
+      "10,7": 4,
+      "10,8": 4,
+      "10,9": 4,
+      "10,10": 4,
+      "10,11": 4,
+      "10,12": 4,
+      "11,5": 4,
+      "11,6": 4,
+      "11,7": 4,
+      "11,8": 4,
+      "11,9": 4,
+      "11,10": 4,
+      "11,11": 4,
+      "11,12": 4,
+      "13,2": 5,
+      "14,2": 6,
+      "14,3": 7,
+      "14,4": 7,
+      "14,5": 7,
+      "14,6": 7,
+      "14,7": 7,
+      "14,8": 7,
+      "14,9": 7,
+      "14,10": 7,
+      "14,11": 7,
+      "14,12": 7,
+      "14,13": 7,
+      "14,14": 7,
+      "14,15": 8,
+      "15,2": 9,
+      "15,3": 10,
+      "15,4": 10,
+      "15,5": 10,
+      "15,6": 10,
+      "15,7": 10,
+      "15,8": 10,
+      "15,9": 10,
+      "15,10": 10,
+      "15,11": 10,
+      "15,12": 10,
+      "15,13": 10,
+      "15,14": 10,
+      "15,15": 11,
+      "17,2": 5,
+      "18,2": 6,
+      "18,3": 7,
+      "18,4": 7,
+      "18,5": 7,
+      "18,6": 7,
+      "18,7": 7,
+      "18,8": 7,
+      "18,9": 7,
+      "18,10": 7,
+      "18,11": 7,
+      "18,12": 7,
+      "18,13": 7,
+      "18,14": 7,
+      "18,15": 8,
+      "19,2": 9,
+      "19,3": 10,
+      "19,4": 10,
+      "19,5": 10,
+      "19,6": 10,
+      "19,7": 10,
+      "19,8": 10,
+      "19,9": 10,
+      "19,10": 10,
+      "19,11": 10,
+      "19,12": 10,
+      "19,13": 10,
+      "19,14": 10,
+      "19,15": 11,
+      "20,10": 0,
+      "20,11": 0,
+      "20,12": 0,
+      "20,13": 0,
+      "20,14": 0,
+      "20,15": 0,
+      "21,2": 12,
+      "21,3": 13,
+      "21,4": 13,
+      "21,5": 13,
+      "21,6": 13,
+      "21,7": 13,
+      "21,9": 14,
+      "21,10": 15,
+      "21,11": 16,
+      "21,12": 16,
+      "21,13": 16,
+      "21,14": 16,
+      "21,15": 17,
+      "21,16": 18,
+      "22,2": 13,
+      "22,3": 13,
+      "22,4": 13,
+      "22,5": 13,
+      "22,6": 13,
+      "22,7": 13,
+      "22,9": 14,
+      "22,10": 19,
+      "22,11": 20,
+      "22,12": 20,
+      "22,13": 20,
+      "22,14": 20,
+      "22,15": 21,
+      "22,16": 18,
+      "23,10": 3,
+      "23,11": 3,
+      "23,12": 3,
+      "23,13": 3,
+      "23,14": 3,
+      "23,15": 3
+    },
+    "SheetStyle": {
+      "FontFamily": 11,
+      "FontSize": 13.333333015441895,
+      "Foreground": 12
+    }
+  },
+  "Spans": [
+    "14,2,2,14",
+    "18,2,2,14",
+    "21,2,2,6",
+    "21,10,2,6",
+    "6,5,6,8",
+    "2,4,2,10"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, Forguncy",
+    "Title": "プロファイルの編集",
+    "RowBreakLines": [],
+    "RepeatRangeSettings": [],
+    "IsBuiltInPage": true,
+    "IsMobilePage": true
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}

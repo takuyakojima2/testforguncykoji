@@ -1,0 +1,869 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableSet>
+  <Relations>
+    <Item class="Forguncy.ForeignkeyInfomation" assembly="ForguncyDataAccess">
+      <ForeignColumn>Country</ForeignColumn>
+      <ForeignTable>Travel</ForeignTable>
+      <PrimaryColumn>ID</PrimaryColumn>
+      <PrimaryTable>Country</PrimaryTable>
+      <RelationTypeOnDelete>None</RelationTypeOnDelete>
+      <RelationTypeOnUpdate>None</RelationTypeOnUpdate>
+    </Item>
+    <Item class="Forguncy.ForeignkeyInfomation" assembly="ForguncyDataAccess">
+      <ForeignColumn>HolidayType</ForeignColumn>
+      <ForeignTable>TravelHoliday</ForeignTable>
+      <PrimaryColumn>ID</PrimaryColumn>
+      <PrimaryTable>HolidayType</PrimaryTable>
+      <RelationTypeOnDelete>None</RelationTypeOnDelete>
+      <RelationTypeOnUpdate>None</RelationTypeOnUpdate>
+    </Item>
+    <Item class="Forguncy.ForeignkeyInfomation" assembly="ForguncyDataAccess">
+      <ForeignColumn>Compensatory</ForeignColumn>
+      <ForeignTable>TravelHoliday</ForeignTable>
+      <PrimaryColumn>ID</PrimaryColumn>
+      <PrimaryTable>CompensatoryType</PrimaryTable>
+      <RelationTypeOnDelete>None</RelationTypeOnDelete>
+      <RelationTypeOnUpdate>None</RelationTypeOnUpdate>
+    </Item>
+    <Item class="Forguncy.ForeignkeyInfomation" assembly="ForguncyDataAccess">
+      <ForeignColumn>レコードID</ForeignColumn>
+      <ForeignTable>Travel_ワークフロー履歴ビュー</ForeignTable>
+      <PrimaryColumn>ID</PrimaryColumn>
+      <PrimaryTable>Travel</PrimaryTable>
+      <RelationTypeOnDelete>None</RelationTypeOnDelete>
+      <RelationTypeOnUpdate>None</RelationTypeOnUpdate>
+    </Item>
+    <Item class="Forguncy.ForeignkeyInfomation" assembly="ForguncyDataAccess">
+      <ForeignColumn>実行者</ForeignColumn>
+      <ForeignTable>Travel_ワークフロー履歴ビュー</ForeignTable>
+      <IsDetailTableRelation>False</IsDetailTableRelation>
+      <PrimaryColumn>ユーザー名</PrimaryColumn>
+      <PrimaryTable>ユーザー情報ビュー</PrimaryTable>
+      <RelationTypeOnDelete>None</RelationTypeOnDelete>
+      <RelationTypeOnUpdate>None</RelationTypeOnUpdate>
+    </Item>
+  </Relations>
+  <Tables>
+    <Item class="Forguncy.Model.Tables.Table" assembly="Forguncy">
+      <Columns>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <AutoIncrement>True</AutoIncrement>
+          <ColumnType>System.Int32</ColumnType>
+          <DatabaseColumnType>int</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>ID</Name>
+          <ReadOnly>True</ReadOnly>
+          <Required>True</Required>
+          <Unique>True</Unique>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>nvarchar</DatabaseColumnType>
+          <MaxLength>4000</MaxLength>
+          <Name>Name</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_Creator</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_CreateDate</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_LastModifier</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_LastModifyDate</Name>
+        </Item>
+      </Columns>
+      <Name>CompensatoryType</Name>
+      <PrimaryKey>
+        <Item type="System.String">
+          <Value>ID</Value>
+        </Item>
+      </PrimaryKey>
+      <Weight>0</Weight>
+    </Item>
+    <Item class="Forguncy.Model.Tables.Table" assembly="Forguncy">
+      <Columns>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <AutoIncrement>True</AutoIncrement>
+          <ColumnType>System.Int32</ColumnType>
+          <DatabaseColumnType>int</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>ID</Name>
+          <ReadOnly>True</ReadOnly>
+          <Required>True</Required>
+          <Unique>True</Unique>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>nvarchar</DatabaseColumnType>
+          <MaxLength>4000</MaxLength>
+          <Name>Name</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_Creator</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_CreateDate</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_LastModifier</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_LastModifyDate</Name>
+        </Item>
+      </Columns>
+      <Name>Country</Name>
+      <PrimaryKey>
+        <Item type="System.String">
+          <Value>ID</Value>
+        </Item>
+      </PrimaryKey>
+      <Weight>1</Weight>
+    </Item>
+    <Item class="Forguncy.Model.Tables.Table" assembly="Forguncy">
+      <Columns>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <AutoIncrement>True</AutoIncrement>
+          <ColumnType>System.Int32</ColumnType>
+          <DatabaseColumnType>int</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>ID</Name>
+          <ReadOnly>True</ReadOnly>
+          <Required>True</Required>
+          <Unique>True</Unique>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>nvarchar</DatabaseColumnType>
+          <MaxLength>4000</MaxLength>
+          <Name>Name</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_Creator</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_CreateDate</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_LastModifier</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_LastModifyDate</Name>
+        </Item>
+      </Columns>
+      <Name>HolidayType</Name>
+      <PrimaryKey>
+        <Item type="System.String">
+          <Value>ID</Value>
+        </Item>
+      </PrimaryKey>
+      <Weight>2</Weight>
+    </Item>
+    <Item class="Forguncy.Model.Tables.Table" assembly="Forguncy">
+      <Columns>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <AutoIncrement>True</AutoIncrement>
+          <ColumnType>System.Int32</ColumnType>
+          <DatabaseColumnType>int</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>ID</Name>
+          <ReadOnly>True</ReadOnly>
+          <Required>True</Required>
+          <Unique>True</Unique>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>nvarchar</DatabaseColumnType>
+          <MaxLength>4000</MaxLength>
+          <Name>Time</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_Creator</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_CreateDate</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_LastModifier</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_LastModifyDate</Name>
+        </Item>
+      </Columns>
+      <Name>Time</Name>
+      <PrimaryKey>
+        <Item type="System.String">
+          <Value>ID</Value>
+        </Item>
+      </PrimaryKey>
+      <Weight>3</Weight>
+    </Item>
+    <Item class="Forguncy.Model.Tables.Table" assembly="Forguncy">
+      <Columns>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <AutoIncrement>True</AutoIncrement>
+          <ColumnType>System.Int32</ColumnType>
+          <DatabaseColumnType>System.Int64</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>ID</Name>
+          <ReadOnly>True</ReadOnly>
+          <Required>True</Required>
+          <Unique>True</Unique>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.Int32</ColumnType>
+          <DatabaseColumnType>System.Int64</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>Country</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <DatabaseColumnType>System.Double</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>StartDate</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <DatabaseColumnType>System.Double</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>EndDate</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>ApplicationDate</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <MaxLength>4000</MaxLength>
+          <Name>Purpose</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <Name>Code</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.Decimal</ColumnType>
+          <DatabaseColumnType>System.Double</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>Advance</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <MaxLength>4000</MaxLength>
+          <Name>Memo</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.Double</ColumnType>
+          <DatabaseColumnType>System.Double</DatabaseColumnType>
+          <Name>TotalCost</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <MaxLength>4000</MaxLength>
+          <Name>FGC_AssignTo</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <MaxLength>4000</MaxLength>
+          <Name>FGC_State</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_Creator</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_CreateDate</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_LastModifier</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_LastModifyDate</Name>
+        </Item>
+      </Columns>
+      <FlowProcess>
+        <FlowPaths>
+          <Item class="Forguncy.Model.FlowProcessPath" assembly="Forguncy">
+            <Action>
+              <ActionName>提出</ActionName>
+              <GUID>e0605838-75eb-47b8-b55f-e94f51b34063</GUID>
+            </Action>
+            <Assignees>
+              <Item class="Forguncy.Model.FlowProcessRole" assembly="CommonUtilities">
+                <FlowProcessRoleType>CustomProperty</FlowProcessRoleType>
+                <Name>Manager</Name>
+              </Item>
+            </Assignees>
+            <Commands>
+              <CommandList>
+                <Item class="Forguncy.Model.UpdateDataTableCommand" assembly="Forguncy">
+                  <Comments>申請日を保存します。</Comments>
+                  <ConfirmText>本当に更新してもよろしいですか？</ConfirmText>
+                  <ShowConfirm>False</ShowConfirm>
+                  <TableName>Travel</TableName>
+                  <UpdateValues>
+                    <Item class="Forguncy.Model.UpdateValueItem" assembly="Forguncy">
+                      <ColumnName>ApplicationDate</ColumnName>
+                      <Value type="System.String">
+                        <Value>=NOW()</Value>
+                      </Value>
+                    </Item>
+                  </UpdateValues>
+                </Item>
+                <Item class="Forguncy.Model.NavigateCommand" assembly="Forguncy">
+                  <PageName>Travel_Report_My_List</PageName>
+                </Item>
+              </CommandList>
+              <GUID>4c60e4b5-1f17-4e54-94aa-89c1c45b4f37</GUID>
+            </Commands>
+            <StartState>
+              <Id>7ac2b369-b216-48ed-a03c-5f89394b711d</Id>
+              <StateName>新規</StateName>
+            </StartState>
+            <ToState>
+              <Id>3eeb384b-59d7-4c12-92ef-b81b5662ffe1</Id>
+              <StateName>承認待ち</StateName>
+            </ToState>
+          </Item>
+          <Item class="Forguncy.Model.ApprovalProcessPath" assembly="Forguncy">
+            <Assignees>
+              <Item class="Forguncy.Model.FlowProcessRole" assembly="CommonUtilities">
+                <FlowProcessRoleType>Group</FlowProcessRoleType>
+                <Name>経理部</Name>
+              </Item>
+            </Assignees>
+            <Items>
+              <Item class="Forguncy.Model.ApprovalProcessPathItem" assembly="Forguncy">
+                <ApproveCommands>
+                  <CommandList>
+                    <Item class="Forguncy.Model.NavigateCommand" assembly="Forguncy">
+                      <PageName>Travel_Report_Approve_List</PageName>
+                    </Item>
+                  </CommandList>
+                  <GUID>b531dcbb-8f92-4de1-b944-e8d3ba6d83e8</GUID>
+                </ApproveCommands>
+                <GUID>4a5efed9-1797-4876-b3c8-bddf0e5b4599</GUID>
+                <RejectCommands>
+                  <CommandList>
+                    <Item class="Forguncy.Model.NavigateCommand" assembly="Forguncy">
+                      <PageName>Travel_Report_Approve_List</PageName>
+                    </Item>
+                  </CommandList>
+                  <GUID>83a7d095-3e92-4539-b97f-6104b3b694e9</GUID>
+                </RejectCommands>
+                <Role>
+                  <FilterBy>
+                    <FilterByType>Creator</FilterByType>
+                  </FilterBy>
+                  <FlowProcessRoleType>Group</FlowProcessRoleType>
+                  <Name>リーダー</Name>
+                </Role>
+              </Item>
+              <Item class="Forguncy.Model.ApprovalProcessPathItem" assembly="Forguncy">
+                <ApproveCommands>
+                  <CommandList>
+                    <Item class="Forguncy.Model.NavigateCommand" assembly="Forguncy">
+                      <PageName>Travel_Report_Approve_List</PageName>
+                    </Item>
+                  </CommandList>
+                  <GUID>6fe2513a-387d-479f-bbba-e4d48f48544a</GUID>
+                </ApproveCommands>
+                <Condition class="ForguncyDataAccess.GeneralCESqlCondition" assembly="ForguncyDataAccess">
+                  <ColumnBindingInfo>
+                    <ColumnName>TotalCost</ColumnName>
+                    <TableName>Travel</TableName>
+                  </ColumnBindingInfo>
+                  <CompareType>GreaterThan</CompareType>
+                  <Id>dfa7b8e5-a869-4c59-a704-d5b7cb9c5809</Id>
+                  <Value type="System.String">
+                    <Value>50000</Value>
+                  </Value>
+                </Condition>
+                <GUID>2041df07-3be7-42ad-a6a6-797b486ebcc9</GUID>
+                <RejectCommands>
+                  <CommandList>
+                    <Item class="Forguncy.Model.NavigateCommand" assembly="Forguncy">
+                      <PageName>Travel_Report_Approve_List</PageName>
+                    </Item>
+                  </CommandList>
+                  <GUID>e35e9fd9-68cd-4057-81e2-626a379a5b90</GUID>
+                </RejectCommands>
+                <RejectSetting>
+                  <RejectBehavior>BackToPreStep</RejectBehavior>
+                </RejectSetting>
+                <Role>
+                  <FilterBy>
+                    <FilterByType>Creator</FilterByType>
+                  </FilterBy>
+                  <FlowProcessRoleType>Group</FlowProcessRoleType>
+                  <Name>部長</Name>
+                </Role>
+              </Item>
+              <Item class="Forguncy.Model.ApprovalProcessPathItem" assembly="Forguncy">
+                <ApproveCommands>
+                  <CommandList>
+                    <Item class="Forguncy.Model.NavigateCommand" assembly="Forguncy">
+                      <PageName>Travel_Report_Approve_List</PageName>
+                    </Item>
+                  </CommandList>
+                  <GUID>ab853f2c-7147-4c83-a697-4ee38d9ad6ff</GUID>
+                </ApproveCommands>
+                <Condition class="ForguncyDataAccess.GeneralCESqlCondition" assembly="ForguncyDataAccess">
+                  <ColumnBindingInfo>
+                    <ColumnName>TotalCost</ColumnName>
+                    <TableName>Travel</TableName>
+                  </ColumnBindingInfo>
+                  <CompareType>GreaterThan</CompareType>
+                  <Id>257f8d35-805b-4d27-9cc4-49f199fde6d5</Id>
+                  <Value type="System.String">
+                    <Value>100000</Value>
+                  </Value>
+                </Condition>
+                <GUID>87a8167a-4535-4192-8991-fa99c3706ef2</GUID>
+                <RejectCommands>
+                  <CommandList>
+                    <Item class="Forguncy.Model.NavigateCommand" assembly="Forguncy">
+                      <PageName>Travel_Report_Approve_List</PageName>
+                    </Item>
+                  </CommandList>
+                  <GUID>87d45213-19e5-4430-80cb-28043d1744bd</GUID>
+                </RejectCommands>
+                <RejectSetting>
+                  <RejectBehavior>BackToPreStep</RejectBehavior>
+                </RejectSetting>
+                <Role>
+                  <FilterBy>
+                    <FilterByType>Creator</FilterByType>
+                  </FilterBy>
+                  <FlowProcessRoleType>Group</FlowProcessRoleType>
+                  <Name>事業部長</Name>
+                </Role>
+              </Item>
+            </Items>
+            <OperatorsPolicy>One</OperatorsPolicy>
+            <StartState>
+              <Id>3eeb384b-59d7-4c12-92ef-b81b5662ffe1</Id>
+              <StateName>承認待ち</StateName>
+            </StartState>
+            <ToState>
+              <Id>baa2a300-10dd-4a8d-9bb1-3630ddd9aa44</Id>
+              <StateName>承認済み</StateName>
+            </ToState>
+          </Item>
+          <Item class="Forguncy.Model.FlowProcessPath" assembly="Forguncy">
+            <Action>
+              <ActionName>経理確認</ActionName>
+              <GUID>c0ef38c6-ac43-43b4-ab14-01f35e702e93</GUID>
+            </Action>
+            <Assignees>
+              <Item class="Forguncy.Model.FlowProcessRole" assembly="CommonUtilities">
+                <FlowProcessRoleType>None</FlowProcessRoleType>
+                <Name>(None)</Name>
+              </Item>
+            </Assignees>
+            <Commands>
+              <CommandList>
+                <Item class="Forguncy.Model.NavigateCommand" assembly="Forguncy">
+                  <PageName>Travel_Report_Approve_List</PageName>
+                </Item>
+              </CommandList>
+              <GUID>216aa98d-aa92-4111-90dd-1d326b278469</GUID>
+            </Commands>
+            <StartState>
+              <Id>baa2a300-10dd-4a8d-9bb1-3630ddd9aa44</Id>
+              <StateName>承認済み</StateName>
+            </StartState>
+            <ToState>
+              <Id>aa2e65d5-39fd-4f55-93f1-cf8efb315530</Id>
+              <StateName>経理確認済み</StateName>
+            </ToState>
+          </Item>
+          <Item class="Forguncy.Model.FlowProcessPath" assembly="Forguncy">
+            <Action>
+              <ActionName>経理差し戻し</ActionName>
+              <GUID>cbbaaa05-57b7-4a24-a2d1-fe79042b7b99</GUID>
+            </Action>
+            <Assignees>
+              <Item class="Forguncy.Model.FlowProcessRole" assembly="CommonUtilities">
+                <FlowProcessRoleType>Creator</FlowProcessRoleType>
+                <Name>Creator</Name>
+              </Item>
+            </Assignees>
+            <Commands>
+              <CommandList>
+                <Item class="Forguncy.Model.NavigateCommand" assembly="Forguncy">
+                  <PageName>Travel_Report_Approve_List</PageName>
+                </Item>
+              </CommandList>
+              <GUID>767cf529-ba31-44c9-a32b-9ae804d66d5f</GUID>
+            </Commands>
+            <StartState>
+              <Id>baa2a300-10dd-4a8d-9bb1-3630ddd9aa44</Id>
+              <StateName>承認済み</StateName>
+            </StartState>
+            <ToState>
+              <Id>cb4d2961-97c3-4d3b-bea3-9f76796d484d</Id>
+              <StateName>経理差し戻し</StateName>
+            </ToState>
+          </Item>
+        </FlowPaths>
+        <FlowStates>
+          <Item class="Forguncy.Model.FlowState" assembly="Forguncy">
+            <Id>7ac2b369-b216-48ed-a03c-5f89394b711d</Id>
+            <StateName>新規</StateName>
+          </Item>
+          <Item class="Forguncy.Model.FlowState" assembly="Forguncy">
+            <Id>3eeb384b-59d7-4c12-92ef-b81b5662ffe1</Id>
+            <StateName>承認待ち</StateName>
+          </Item>
+          <Item class="Forguncy.Model.FlowState" assembly="Forguncy">
+            <Id>baa2a300-10dd-4a8d-9bb1-3630ddd9aa44</Id>
+            <StateName>承認済み</StateName>
+          </Item>
+          <Item class="Forguncy.Model.FlowState" assembly="Forguncy">
+            <Id>aa2e65d5-39fd-4f55-93f1-cf8efb315530</Id>
+            <StateName>経理確認済み</StateName>
+          </Item>
+          <Item class="Forguncy.Model.FlowState" assembly="Forguncy">
+            <Id>cb4d2961-97c3-4d3b-bea3-9f76796d484d</Id>
+            <StateName>経理差し戻し</StateName>
+          </Item>
+        </FlowStates>
+        <IsEnabled>True</IsEnabled>
+      </FlowProcess>
+      <Name>Travel</Name>
+      <PrimaryKey>
+        <Item type="System.String">
+          <Value>ID</Value>
+        </Item>
+      </PrimaryKey>
+      <Weight>4</Weight>
+    </Item>
+    <Item class="Forguncy.Model.Tables.Table" assembly="Forguncy">
+      <BuiltInViewInfo>
+        <CreateViewSql>SELECT ID,"RecordId" AS "レコードID","Who" AS "実行者","When" AS "日時","FGC_State" AS "実行後の状態","FGC_AssignTo" AS "担当者","ActionName" AS "アクション名","Comments" AS "コメント" FROM "Travel_FGC_WHT";</CreateViewSql>
+        <RelatedWorkflowTableName>Travel</RelatedWorkflowTableName>
+        <ViewName>Travel_ワークフロー履歴ビュー</ViewName>
+        <ViewType>BuiltInWorkFlowHistoryInfo</ViewType>
+      </BuiltInViewInfo>
+      <Columns>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <AutoIncrement>True</AutoIncrement>
+          <ColumnType>System.Int64</ColumnType>
+          <DatabaseColumnType>System.Int64</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>ID</Name>
+          <Required>True</Required>
+          <Unique>True</Unique>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.Int64</ColumnType>
+          <DatabaseColumnType>System.Int64</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>レコードID</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>実行者</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.Double</ColumnType>
+          <DatabaseColumnType>System.Double</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>日時</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>実行後の状態</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>担当者</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>アクション名</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>コメント</Name>
+        </Item>
+      </Columns>
+      <Name>Travel_ワークフロー履歴ビュー</Name>
+      <PrimaryKey>
+        <Item type="System.String">
+          <Value>ID</Value>
+        </Item>
+      </PrimaryKey>
+      <Weight>5</Weight>
+    </Item>
+    <Item class="Forguncy.Model.Tables.Table" assembly="Forguncy">
+      <BuiltInViewInfo>
+        <CreateViewSql>SELECT "FGC_UserName" AS "ユーザー名","FGC_FullName" AS "氏名","FGC_Email" AS "メールアドレス","FGC_Role" AS "ロール","FGC_OrganizationSuperior" AS "上位組織のメンバー","事業部","部門","課グループ" FROM "FGC_UserInfoTable";</CreateViewSql>
+        <ViewName>ユーザー情報ビュー</ViewName>
+        <ViewType>BuiltInUserInfo</ViewType>
+      </BuiltInViewInfo>
+      <Columns>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>ユーザー名</Name>
+          <Required>True</Required>
+          <Unique>True</Unique>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>氏名</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>メールアドレス</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>ロール</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>上位組織のメンバー</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>事業部</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>部門</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <DefaultValue class="System.DBNull" assembly="mscorlib" />
+          <MaxLength>-1</MaxLength>
+          <Name>課グループ</Name>
+        </Item>
+      </Columns>
+      <Name>ユーザー情報ビュー</Name>
+      <PrimaryKey>
+        <Item type="System.String">
+          <Value>ユーザー名</Value>
+        </Item>
+      </PrimaryKey>
+      <Weight>6</Weight>
+    </Item>
+    <Item class="Forguncy.Model.Tables.Table" assembly="Forguncy">
+      <Columns>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <AutoIncrement>True</AutoIncrement>
+          <ColumnType>System.Int32</ColumnType>
+          <DatabaseColumnType>System.Int64</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>ID</Name>
+          <ReadOnly>True</ReadOnly>
+          <Required>True</Required>
+          <Unique>True</Unique>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.Int32</ColumnType>
+          <DatabaseColumnType>System.Int64</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>TravelID</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <DatabaseColumnType>System.Double</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>Date</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>System.String</DatabaseColumnType>
+          <MaxLength>4000</MaxLength>
+          <Name>Detail</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.Decimal</ColumnType>
+          <DatabaseColumnType>System.Double</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>Travel Fee</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.Double</ColumnType>
+          <Name>Accommodation</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.Decimal</ColumnType>
+          <DatabaseColumnType>System.Double</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>Food</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.Decimal</ColumnType>
+          <DatabaseColumnType>System.Double</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>Other</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_Creator</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_CreateDate</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_LastModifier</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_LastModifyDate</Name>
+        </Item>
+      </Columns>
+      <Name>TravelDetail</Name>
+      <PrimaryKey>
+        <Item type="System.String">
+          <Value>ID</Value>
+        </Item>
+      </PrimaryKey>
+      <Weight>7</Weight>
+    </Item>
+    <Item class="Forguncy.Model.Tables.Table" assembly="Forguncy">
+      <Columns>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <AutoIncrement>True</AutoIncrement>
+          <ColumnType>System.Int32</ColumnType>
+          <DatabaseColumnType>int</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>ID</Name>
+          <ReadOnly>True</ReadOnly>
+          <Required>True</Required>
+          <Unique>True</Unique>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.Int32</ColumnType>
+          <DatabaseColumnType>int</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>TravelHolidayID</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <DatabaseColumnType>datetime</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>Date</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.Int32</ColumnType>
+          <DatabaseColumnType>int</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>HolidayType</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>nvarchar</DatabaseColumnType>
+          <MaxLength>4000</MaxLength>
+          <Name>DepartureTime</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <DatabaseColumnType>nvarchar</DatabaseColumnType>
+          <MaxLength>4000</MaxLength>
+          <Name>ArrivalTime</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.BindingColumn" assembly="Forguncy">
+          <ColumnType>System.Int32</ColumnType>
+          <DatabaseColumnType>int</DatabaseColumnType>
+          <MaxLength>-1</MaxLength>
+          <Name>Compensatory</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_Creator</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_CreateDate</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.UserExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.String</ColumnType>
+          <Name>FGC_LastModifier</Name>
+        </Item>
+        <Item class="Forguncy.Model.Tables.DateExtraBingingColumn" assembly="Forguncy">
+          <ColumnType>System.DateTime</ColumnType>
+          <Name>FGC_LastModifyDate</Name>
+        </Item>
+      </Columns>
+      <Name>TravelHoliday</Name>
+      <PrimaryKey>
+        <Item type="System.String">
+          <Value>ID</Value>
+        </Item>
+      </PrimaryKey>
+      <Weight>8</Weight>
+    </Item>
+  </Tables>
+</TableSet>

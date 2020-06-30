@@ -1,0 +1,64 @@
+{
+  "Rows": {
+    "Count": 24,
+    "DefaultSize": 15.0
+  },
+  "Cols": {
+    "Count": 44,
+    "DefaultSize": 15.0
+  },
+  "Values": {
+    "4,1": "ただいまメンテナンス中です",
+    "10,1": "現在メンテナンスを行っているため、目的のサイトにアクセスできません。",
+    "13,1": "ご迷惑をおかけしますが、お時間をおいて後ほどアクセスしてください。"
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontSize": 32.0,
+        "Foreground": 0,
+        "HorizontalAlignment": 1
+      },
+      {
+        "HorizontalAlignment": 1
+      },
+      {
+        "FontSize": 22.666666030883789,
+        "Foreground": 2
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "#FF5A5A5A",
+        "Center",
+        "#FF323232",
+        "Meiryo UI"
+      ]
+    },
+    "CellStyles": {
+      "4,1": 0,
+      "4,43": 1,
+      "10,1": 2,
+      "13,1": 2
+    },
+    "SheetStyle": {
+      "FontFamily": 3
+    }
+  },
+  "Spans": [
+    "4,1,3,42",
+    "10,1,3,42",
+    "13,1,3,42"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, Forguncy",
+    "MobilePageName": "FGC_ただいまメンテナンス中です_モバイル",
+    "RowBreakLines": [],
+    "RepeatRangeSettings": [],
+    "IsBuiltInPage": true
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}
