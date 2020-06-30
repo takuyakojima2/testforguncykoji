@@ -81,16 +81,7 @@
   },
   {
     "ModuleName": "Main",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "RION-NET\\t-kojima",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2020-06-30T21:52:48.0125922+09:00",
-    "ModuleType": 1,
-    "ToRemoveFiles": [
-      "Pages\\Main.json"
-    ]
+    "ModuleType": 1
   },
   {
     "ModuleName": "Travel_Report_Approve_List",

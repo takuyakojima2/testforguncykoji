@@ -36,57 +36,6 @@
     "106,1": "本サンプルでは、ログインページをカスタマイズしてログインユーザーを表示していますが、ビルトイン画面であるログインページはリセットが可能です。",
     "108,1": "右ペインの「ページ設定」よりリセットしてください。"
   },
-  "AttachInfos": {
-    "78,28": {
-      "CellType": {
-        "$type": "Forguncy.ButtonCellType, Forguncy",
-        "TemplateKey": "_RS_Normal_Style2",
-        "UIPermissions": [
-          {
-            "Scope": 2,
-            "AllowRoles": [
-              "FGC_Anonymous"
-            ]
-          },
-          {
-            "Scope": 1,
-            "AllowRoles": [
-              "FGC_Anonymous"
-            ]
-          }
-        ]
-      }
-    },
-    "79,33": {
-      "CellType": {
-        "$type": "Forguncy.TextCellType, Forguncy",
-        "SavedValidators": [
-          {
-            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, Forguncy"
-          }
-        ],
-        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
-        "UIPermissions": [
-          {
-            "Scope": 2,
-            "AllowRoles": [
-              "FGC_Anonymous"
-            ]
-          },
-          {
-            "Scope": 1,
-            "AllowRoles": [
-              "FGC_Anonymous"
-            ]
-          }
-        ]
-      },
-      "BindingInfo": {
-        "TableName": "Country",
-        "ColumnName": "Name"
-      }
-    }
-  },
   "StyleDatas": {
     "Styles": [
       {
@@ -6611,9 +6560,7 @@
     "95,1,2,26",
     "104,1,2,26",
     "19,1,2,50",
-    "4,0,2,58",
-    "79,33,1,12",
-    "78,28,1,3"
+    "4,0,2,58"
   ],
   "Pictures": [
     {
